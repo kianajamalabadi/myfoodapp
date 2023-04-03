@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.foodapp.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:elevation="8dp"
+        android:background="@drawable/background_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/addicon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_margin="10dp"
+                android:src="@drawable/baseline_add_"
+                app:tint="@color/white">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/primary_bold"
+                android:text="KianaFood"
+                android:textColor="@color/white"
+                android:textSize="25sp">
+
+            </TextView>
+
+        </FrameLayout>
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/edittextrectangle"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="15dp"
+            android:hint="find a food"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+        </EditText>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/item_food"
+        android:id="@+id/recycler_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>
